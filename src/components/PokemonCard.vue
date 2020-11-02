@@ -4,6 +4,11 @@
     <div class="pokemon-imagen">
       <img :src="pokemon.sprites.front_default" alt="image" />
     </div>
+    <div class="pokemon-stats-title">Stats</div>
+    <div v-for="p of pokemon.stats" :key="p.stat.url" class="pokemon-stats">
+      <span>{{ p.stat.name }}</span>
+      <span>{{ p.base_stat }}</span>
+    </div>
   </div>
 </template>
 
@@ -12,9 +17,10 @@ export default {
   data() {
     return {
       pokemon: {
-        sprites:{
-          front_defaul: ""
-        }
+        stats: [],
+        sprites: {
+          front_defaul: "",
+        },
       },
     };
   },
@@ -53,6 +59,16 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+}
+.pokemon-stats-title {
+  text-align: center;
+  font-weight: bold;
+  background-color: #bbb;
+}
+.pokemon-stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.1em 0.5em;
+  border: 1px solid #bbb;
 }
 </style>

@@ -1,13 +1,10 @@
 {
-  "homepage": "https://ysebasst.github.io/prueba-vue",
   "name": "prueba-vue",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "core-js": "^3.6.5",
